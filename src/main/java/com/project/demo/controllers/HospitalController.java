@@ -26,7 +26,10 @@ public class HospitalController {
 
     @GetMapping("/record")
     public Hospital getHospitalDataByCode(@RequestParam("code") String code) {
-        return hospitalDataService.getHospitalDataById(code);
+        Hospital hospital = hospitalDataService.getHospitalDataById(code);
+        if(hospital != null) {
+            return hospital;
+        } else return new Hospital();
     }
 
     @GetMapping("/delete")
