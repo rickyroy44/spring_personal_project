@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Patient Data</h2>
+
+  <form method="POST" action="/api/csv/upload-data" enctype="multipart/form-data">
+    <label for="file">Select a file:</label>
+    <input type="file" id="file" name="file">
+    <input type="submit" value="Submit" type="POST">
+  </form>
+  <br/>
+  <br>
+
+  <form method="GET" action="/api/data/all" id="getall">
+    <label for="getall">Fetch All records:</label>
+    <button type="submit" form="getall" value="Submit">Submit</button>
+  </form>
+
+  <br/>
+  <br>
+
+  <form method="GET" action="/api/data/record" id="findcode">
+    <label for="findinput">Find records:</label>
+    <input name="code" id="findinput" />
+    <button type="submit" form="findcode" value="Submit">Find</button>
+  </form>
+
+  <br/>
+  <br>
+
+  <form method="GET" action="/api/data/delete" id="delete">
+    <label for="delete">Find records:</label>
+    <input name="code" id="findinput" />
+    <button type="submit" form="delete" value="Submit">Delete</button>
+
+  </form>
+
+</body>
+
+</html>
